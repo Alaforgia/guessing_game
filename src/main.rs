@@ -1,4 +1,6 @@
 use std::io;
+
+// The Rng trait defines methods that random number generators implement, and this trait must be in scope for us to use those methods. 
 use rand::Rng;
 
 fn main() {
