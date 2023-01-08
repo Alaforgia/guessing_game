@@ -36,7 +36,17 @@ fn main() {
      // and those values are called the enum’s variants. 
     io::stdin().read_line(&mut guess).expect("failed to read line.");
 
-
+    // Rust allows us to shadow the previous value of guess with a new one. This feature is often used in
+    // situations in which you want to convert a value from one type to another type. 
+    // Shadowing lets us reuse the guess variable name rather than forcing us to create two unique variables, such as guess_str and guess for example. 
+    //
+    //
+    // The guess below refers to the original guess that was a String.
+    // The trim method on a String will eliminate any whitespace at the beginning and end.
+    // 
+    //The parse method on strings parses a string into some kind of number. Because this method can parse a variety of number types, 
+    // we need to tell Rust the exact number type we want by using let guess: u32. The colon (:) after guess tells Rust 
+    // we’ll annotate the variable’s type.
     let guess: u32 = guess.trim().parse().expect("Please type a number!");
 
     // " {} " is a placeholder of a value. Below, our "guess" will appear where the curly brackets are.
