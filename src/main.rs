@@ -6,6 +6,11 @@ use rand::Rng;
 fn main() {
     println!("Guess the number!");
 
+    // "rand::thread_rng" function will give us the particular random number generator that we’re going to use: one that is local 
+    // to the current thread of execution and seeded by the operating system.
+    // "gen_range" method is defined by the Rng trait that we brought into scope with the use rand::Rng statement. 
+    // The gen_range method takes two numbers as arguments and generates a random number between them. It’s inclusive on the 
+    // lower bound but exclusive on the upper bound, so we need to specify 1 and 101 to request a number between 1 and 100.
     let secret_number = rand::thread_rng().gen_range(0..101);
 
     println!("The secret number is: {}", secret_number);
