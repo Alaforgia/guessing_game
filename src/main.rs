@@ -1,5 +1,6 @@
 use std::io;
 
+// Like Result, Ordering is another enum, but the variants for Ordering are Less, Greater, and Equal. 
 use std::cmp::Ordering;
 
 // The Rng trait defines methods that random number generators implement, and this trait must be in scope for us to use those methods. 
