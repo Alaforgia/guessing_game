@@ -21,5 +21,12 @@ fn main() {
      // and those values are called the enum’s variants. 
     io::stdin().read_line(&mut guess).expect("failed to read line.");
 
+
+    // " {} " is a placeholder of a value. Below, our "guess" will appear where the curly brackets are.
+    // So if you cargo run, the terminal will prompt you and it will look like this:
+    // Guess the number!
+    // Please input your guess.
+    // 6
+    // You guessed: 6
     println!("You guessed: {}", guess);
 }
