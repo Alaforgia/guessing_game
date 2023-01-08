@@ -48,6 +48,12 @@ fn main() {
     // The cmp method w compares two values and can be called on anything that can be compared. 
     // It takes a reference to whatever you want to compare with: here it’s comparing the guess to the secret_number. 
     // Then it returns a variant of the Ordering enum we brought into scope with the use statement.
+    //
+    //
+    // A match expression is made up of arms. An arm consists of a pattern and the code that should be run 
+    // if the value given to the beginning of the match expression fits that arm’s pattern. Rust takes the value given to
+    // match and looks through each arm’s pattern in turn. The match construct and patterns are powerful features in Rust that 
+    // let you express a variety of situations your code might encounter and make sure that you handle them all.
     match guess.cmp(&secret_number) {
         Ordering::Less => println!("Too small!"),
         Ordering::Greater => println!("Too big!"),
