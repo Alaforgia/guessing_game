@@ -12,6 +12,10 @@ fn main() {
     // "new" is common on many functions that make a new value of some kind.
     let mut guess = String::new();
 
+    // "read_line" takes whatever the user types into standard input and place that into a string, so it takes that string as an argument.
+     // "&" indicates that this argument is a reference, which gives you a way to let multiple parts of your code access one piece of data 
+     // without needing to copy that data into memory multiple times.
+     // References, like variables are immutable by default, so we need to write "&mut guess".
     io::stdin().read_line(&mut guess).expect("failed to read line.");
 
     println!("You guessed: {}", guess);
