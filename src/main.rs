@@ -1,5 +1,7 @@
 use std::io;
 
+use std::cmp::Ordering;
+
 // The Rng trait defines methods that random number generators implement, and this trait must be in scope for us to use those methods. 
 use rand::Rng;
 
@@ -41,4 +43,10 @@ fn main() {
     // 6
     // You guessed: 6
     println!("You guessed: {}", guess);
+
+    match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too small!"),
+        Ordering::Greater => println!("Too big!"),
+        Ordering::Equal => println!("You win!"),
+    }
 }
