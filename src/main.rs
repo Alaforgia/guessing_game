@@ -47,6 +47,8 @@ fn main() {
     //The parse method on strings parses a string into some kind of number. Because this method can parse a variety of number types, 
     // we need to tell Rust the exact number type we want by using let guess: u32. The colon (:) after guess tells Rust 
     // we’ll annotate the variable’s type.
+    //
+    // The u32 seen here is an unsigned, 32-bit integer. It’s a good default choice for a small positive number.
     let guess: u32 = guess.trim().parse().expect("Please type a number!");
 
     // " {} " is a placeholder of a value. Below, our "guess" will appear where the curly brackets are.
