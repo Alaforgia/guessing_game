@@ -45,6 +45,9 @@ fn main() {
     // You guessed: 6
     println!("You guessed: {}", guess);
 
+    // The cmp method w compares two values and can be called on anything that can be compared. 
+    // It takes a reference to whatever you want to compare with: here it’s comparing the guess to the secret_number. 
+    // Then it returns a variant of the Ordering enum we brought into scope with the use statement.
     match guess.cmp(&secret_number) {
         Ordering::Less => println!("Too small!"),
         Ordering::Greater => println!("Too big!"),
