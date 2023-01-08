@@ -37,6 +37,8 @@ fn main() {
     io::stdin().read_line(&mut guess).expect("failed to read line.");
 
 
+    let guess: u32 = guess.trim().parse().expect("Please type a number!");
+
     // " {} " is a placeholder of a value. Below, our "guess" will appear where the curly brackets are.
     // So if you cargo run, the terminal will prompt you and it will look like this:
     // Guess the number!
