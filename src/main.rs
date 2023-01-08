@@ -16,6 +16,9 @@ fn main() {
      // "&" indicates that this argument is a reference, which gives you a way to let multiple parts of your code access one piece of data 
      // without needing to copy that data into memory multiple times.
      // References, like variables are immutable by default, so we need to write "&mut guess".
+     // "read_line" returns a value (in this case " io::Result ") on top of putting whatever is passed into it, into a String.
+     // Result types are enumerations, often referred to as enums. An enumeration is a type that can have a fixed set of values,
+     // and those values are called the enum’s variants. 
     io::stdin().read_line(&mut guess).expect("failed to read line.");
 
     println!("You guessed: {}", guess);
