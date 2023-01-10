@@ -54,6 +54,9 @@ fn main() {
         // The u32 seen here is an unsigned, 32-bit integer. It’s a good default choice for a small positive number.
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
+            // "_" is a catchall value, we want to match all error values no matter what info they have.
+            // continue will tell the program to to go to the next iteration of the loop and ask for another guess.
+            // The program will ignore all errors that parse might encounter.
             Err(_) => continue,
         };
 
