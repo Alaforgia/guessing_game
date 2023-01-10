@@ -16,7 +16,7 @@ fn main() {
     // lower bound but exclusive on the upper bound, so we need to specify 1 and 101 to request a number between 1 and 100.
     let secret_number = rand::thread_rng().gen_range(0..101);
 
-    println!("The secret number is: {}", secret_number);
+    // println!("The secret number is: {}", secret_number);
 
     loop {
         println!("Please input your guess.");
