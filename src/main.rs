@@ -52,7 +52,10 @@ fn main() {
         // we’ll annotate the variable’s type.
         //
         // The u32 seen here is an unsigned, 32-bit integer. It’s a good default choice for a small positive number.
-        let guess: u32 = guess.trim().parse().expect("Please type a number!");
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
 
         // " {} " is a placeholder of a value. Below, our "guess" will appear where the curly brackets are.
         // So if you cargo run, the terminal will prompt you and it will look like this:
